@@ -12,6 +12,7 @@ export class ShapeTypeComponent {
   type = 'rectangle';
 
   typeChanged() {
+    debugger;
     this.onTypeChange.emit(this.type);
   }
 }

@@ -1,8 +1,14 @@
-<mat-form-field appearance="fill">
+<!-- <mat-form-field appearance="fill">
     <mat-label>Bir Şekil Seçiniz</mat-label>
     <mat-select (change)="typeChanged()" [(ngModel)]="type">
         <mat-option value="rectangle">Rectangle</mat-option>
         <mat-option value="line">Line</mat-option>
         <mat-option value="ellipse">Ellipse</mat-option>
     </mat-select>
-</mat-form-field>
+</mat-form-field> -->
+
+<select class="mb-3" (change)="typeChanged()" [(ngModel)]="type">
+    <option value="rectangle">Rectangle</option>
+    <option value="line">Line</option>
+    <option value="ellipse">Ellipse</option>
+</select>

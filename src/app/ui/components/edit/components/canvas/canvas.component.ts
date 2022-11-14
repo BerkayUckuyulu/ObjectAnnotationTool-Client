@@ -14,7 +14,13 @@ export class CanvasComponent implements OnInit {
   constructor(private httpClientService: HttpClientService, private shapeService: ShapeService) { }
   @Input() shapesToDraw: Shape[];
   shapeType = 'rectangle';
-  setType(type: string) { this.shapeType = type; }
+  debugger;
+  setType(type: string) {
+
+    this.shapeType = type;
+    console.log(type);
+
+  }
 
   @Input() currentShape: Subject<Shape>;
   @Input() selectedPicUrl: any;
