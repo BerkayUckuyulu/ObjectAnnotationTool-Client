@@ -1,0 +1,68 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+<div class="row" style="justify-content:center;">
+    <div class="col-md-6 col-md-offset-3 center">
+        <div class="btn-container">
+            <!--the three icons: default, ok file (img), error file (not an img)-->
+            <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+            <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+            <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+            <!--this field changes dinamically displaying the filename we are trying to upload-->
+            <p id="namefile">Kabul Edilen Formatlar (jpg,jpeg,bmp,png)</p>
+            <!--our custom btn which which stays under the actual one-->
+            <button type="button" id="btnup" class="btn btn-primary btn-lg"><input id="inputImg" #txtImg
+                    (change)="readUrl($event)" [(ngModel)]="imagePath" type="file">
+                {{imagePath=="" ? 'Resminizi Ekleyiniz..':'Başka Resim Ekleyiniz..'}}</button>
+            <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+
+            <br><br>
+
+
+
+
+
+        </div>
+    </div>
+    <div class="col-md-10 col-md-offset-1 text-center">
+        <div *ngIf="imagePath!=''">
+            <div>
+
+
+                <button (click)="imageFullPath(txtImg.value)" class="btn btn-warning">{{showResim ? 'Resmi Kapat' :
+                    'Resmi Görüntüle'}}</button>
+
+
+
+                <div class="my-3" *ngIf="showResim">
+
+                    <h3>{{imageFull}}</h3>
+
+
+
+                    <img class="home-img" src="{{url}}" alt="">
+
+                </div>
+
+                <a routerLink="/edit" routerLinkActive="router-link-active" (click)="addImage(txtImg)"
+                    class="btn btn-success ms-2">Resmi Kaydet Ve Düzenleme Sayfasına
+                    Git</a>
+                <button (click)="addImage(txtImg)" class="btn btn-success ms-2">Sadece Resmi Kaydet</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="row mt-2" style="justify-content: center;">
+    <div class="col-4" style="text-align: center;">
+        <a routerLink="/edit" routerLinkActive="router-link-active" class="btn btn-info ms-2">
+            Var Olan Resimlerden Seç
+        </a>
+
+    </div>
+</div>

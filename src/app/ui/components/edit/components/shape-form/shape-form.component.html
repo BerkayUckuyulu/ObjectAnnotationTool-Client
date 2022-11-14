@@ -1,0 +1,55 @@
+<div class="text-area">
+    <h4>Etiket ataması yapmak için aşağıdaki listeden ilgili elemana çift tıklamak gerekmektedir.</h4>
+</div>
+<div class="right-area">
+    <div class="row">
+
+        <div class="col-12 text-center">
+            <select style="width: 120%;" class="ms-2 mb-5" (change)="shapeChanged($event)" [(ngModel)]="localCurrent"
+                size="8">
+                <option (dblclick)="double(shape)" *ngFor="let shape of shapesToEdit;let i=index" [ngValue]="shape">
+                    {{shape|json}}
+
+                </option>
+            </select>
+        </div>
+
+    </div>
+    <div class="row" class="input-area" style="justify-content:space-between;">
+
+
+
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>X</mat-label>
+                <input [(ngModel)]="localCurrent.x" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Y</mat-label>
+                <input [(ngModel)]="localCurrent.y" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>W</mat-label>
+                <input [(ngModel)]="localCurrent.w" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>H</mat-label>
+                <input [(ngModel)]="localCurrent.h" matInput>
+            </mat-form-field>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>

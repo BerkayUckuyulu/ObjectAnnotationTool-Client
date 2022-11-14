@@ -1,0 +1,27 @@
+.shapeCanvas{
+    height:80vh;
+    border:solid;
+    border-color:lightgrey;
+    width: 100%;
+ }
+ 
+ .shape{
+   fill-opacity:0;
+   stroke:red;
+   stroke-width:1;
+ }
+
+ svg{
+   width: 100%;
+    background-image: url("/assets/images/Cebeci-masaüstü.jpg");
+    background-repeat:no-repeat ;
+    background-size: 100% 100%;
+   
+
+/* -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; */
+ }
+ 
+ 

@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+    <mat-label>Bir Şekil Seçiniz</mat-label>
+    <mat-select (change)="typeChanged()" [(ngModel)]="type">
+        <mat-option value="rectangle">Rectangle</mat-option>
+        <mat-option value="line">Line</mat-option>
+        <mat-option value="ellipse">Ellipse</mat-option>
+    </mat-select>
+</mat-form-field>
